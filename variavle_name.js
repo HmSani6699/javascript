@@ -36,4 +36,13 @@ var allman = tak / man;
 var nam = "adiba";
 // console.log(nam);
 nam = "rima";
-console.log(nam)
+// console.log(nam);
+
+
+var num1 = 10;
+num1 = num1 + 20;
+num1 += 10;
+num1++;
+console.log(num1);
+
+
