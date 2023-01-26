@@ -45,6 +45,14 @@ num1 += 10;
 num1++;
 
 
-console.log(num1);
+var firstName = "Md";
+var lastName = "Sadiq";
+var fullName = firstName + " " + lastName;
+
+var number = '22';
+var number1 = 10;
+var total = parseInt(number) + number1;
+
+console.log(total);
 
 
