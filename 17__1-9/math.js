@@ -31,4 +31,4 @@ var parPic = allAmound / friends;
 var man = 20;
 var te = 12;
 var bagFall = man % te;
-console.log(bagFall);
+// console.log(bagFall);
