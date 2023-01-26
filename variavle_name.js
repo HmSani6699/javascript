@@ -53,6 +53,14 @@ var number = '22';
 var number1 = 10;
 var total = parseInt(number) + number1;
 
+
+
+var num = 0.1;
+var num1 = 0.2;
+var total = num1 + num;
+total = parseFloat(total.toFixed(4));
+// total = parseFloat(total);
+
 console.log(total);
 
 
