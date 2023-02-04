@@ -14,4 +14,4 @@ name_1 = 'monna'
 
 const number = 30;
 number = 40 //node allow
-console.log(number)
+// console.log(number)

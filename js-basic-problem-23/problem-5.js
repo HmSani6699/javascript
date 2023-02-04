@@ -7,4 +7,4 @@ for (number of numbers) {
     }
     newArray.push(number)
 }
-console.log(newArray)
+// console.log(newArray)
