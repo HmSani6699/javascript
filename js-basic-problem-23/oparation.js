@@ -34,4 +34,4 @@ let dibaging = num_1 / num_2;
 var num_1 = 10;
 var num_2 = 5;
 let modulas = num_1 % num_2;
-console.log(modulas)
+// console.log(modulas)
