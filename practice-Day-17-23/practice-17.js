@@ -35,5 +35,24 @@ console.log(pan);
 // 7.Objects
  */
 
+//-------------------------------------------------------//
 
+/* -------------Variable Naming Convention--------- */
 
+/*
+
+//alow
+let amar_name = 'Sani';           // Snake Case
+
+let myFriendsName = 'Jakariya';   // CamelCase
+
+let AmiVallo = true;              //PascalCase
+
+//Not alow
+
+let =name='ballo';
+let ami vallo=true;
+let 'tomi'=false;
+let 3number=40;
+
+ */
