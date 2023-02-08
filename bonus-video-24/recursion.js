@@ -20,3 +20,26 @@ function sum(num) {
 5 + 4 + 3 + 2 + 1 sum(0)
 5 + 4 + 3 + 2 + 1 + 0
 */
+
+
+let factorialNUmber = 1;
+for (let i = 5; i >= 1; i--) {
+    factorialNUmber *= i
+}
+
+console.log(factorialNUmber)
+
+function factorial(n) {
+    if (n === 1) {
+        return 1;
+    }
+    return n * factorial(n - 1)
+}
+let output = factorial(5);
+console.log(output)
+
+/* 
+3 * factorial(2);
+3 * 2 * factorial(1)
+3 * 2 * 1 * factorial(0)
+*/
