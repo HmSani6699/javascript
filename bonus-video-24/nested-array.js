@@ -10,5 +10,5 @@ let subject = ['Bangla', [
     'arbi', ['ordo', 'arbi', 'kayda']];
 
 let a = subject[1][0].name
-console.log(a)
+console.log(a);
 
