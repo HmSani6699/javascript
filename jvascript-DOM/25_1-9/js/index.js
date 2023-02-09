@@ -8,6 +8,7 @@ for (const tagName of tagNames) {
     let textCenter = tagName.style.textAlign = ' center';
     let borderTopRightRadius = tagName.style.borderTopRightRadius = '20px';
     let borderRadius = tagName.style.borderBottomLeftRadius = '20px';
+    let font = tagName.style.fonts = '20px';
 }
 
 //getElementById
