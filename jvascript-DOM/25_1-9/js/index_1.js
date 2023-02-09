@@ -55,17 +55,6 @@ let addClassList = thirdTitle.classList.add('third');
 let removeClassList = thirdTitle.classList.remove('third');
 
 
-/* ---------------js style ------------ */
-
-let sections = document.getElementsByTagName('section');
-for (let section of sections) {
-    section.style.border = '2px solid gray';
-    section.style.marginBottom = '10px';
-    section.style.borderRadius = '15px';
-    section.style.textAlign = 'center';
-    section.style.background = '#00bcd4';
-}
-
 /* ------ innerText and innerHtml ---- */
 
 //innerText
@@ -80,8 +69,13 @@ let thirdSection = document.getElementById('third-section');
 let innerHtml = thirdSection.innerHTML;
 // console.log(innerHtml)
 
+/* ---------------js style ------------ */
 
-/* ---------------New Section add-----------*/
-
-let main = document.getElementById('main-container');
-console.log(main)
+let sections = document.getElementsByTagName('section');
+for (let section of sections) {
+    section.style.border = '2px solid gray';
+    section.style.marginBottom = '10px';
+    section.style.borderRadius = '15px';
+    section.style.textAlign = 'center';
+    section.style.background = '#00bcd4';
+}
