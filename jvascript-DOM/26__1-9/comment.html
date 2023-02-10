@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+</head>
+
+<body>
+    <h1>Place add your comment</h1>
+
+    <div id="container">
+        <p>Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Esse reiciendis,
+            quos et architecto dolor est
+            exercitationem nobis deserunt at, illo
+            possimus. Laudantium dolorum fuga
+            autem adipisci, incidunt architecto
+            alias sed voluptatibus ex aliquid, aut
+            iste, deserunt voluptates. Quae soluta
+            vitae praesentium qui similique. Nemo
+            nulla iure alias, adipisci beatae
+            aliquid.</p>
+        <p>Minus nesciunt quis doloribus officiis
+            officia provident deserunt asperiores
+            illum, id laudantium reprehenderit
+            ipsum dolorum voluptates aspernatur,
+            assumenda, tempore obcaecati odio
+            doloremque suscipit dolor fugiat? Iste
+            illo numquam ad culpa, pariatur
+            assumenda eveniet ab iusto ex possimus
+            suscipit fuga rem cum, ipsa, commodi
+            ullam illum consectetur fugiat.
+            Debitis, tempora earum!</p>
+        <p>Sequi facilis, illum tempore sit non
+            voluptatem corrupti quis aliquam quae
+            laudantium in est ab, aliquid ducimus
+            pariatur? Illum voluptates blanditiis
+            dolore tempore atque, minima, deleniti
+            quasi id, inventore harum ut nostrum!
+            Ipsum exercitationem quia dolores quod
+            libero officia vero odit eos
+            recusandae, et modi aspernatur non
+            ratione eum tempora.</p>
+    </div>
+    <div>
+        <textarea name="" id="comment-box"
+            cols="70" rows="5"></textarea>
+        <br>
+        <button id="add-btn">Add</button>
+
+        <script>
+            document.getElementById('add-btn').addEventListener('click', function () {
+                let commentBox = document.getElementById('comment-box');
+
+                let container = document.getElementById('container');
+
+                let p = document.createElement('p');
+                p.innerText = commentBox.value;
+
+                container.appendChild(p);
+
+                commentBox.value = ''
+            })
+        </script>
+    </div>
+</body>
+
+</html>
