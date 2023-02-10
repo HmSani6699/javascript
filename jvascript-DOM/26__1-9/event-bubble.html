@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>Event Bubble</h1>
+        <ul id="list-container">
+            <li id="item-1">item-1</li>
+            <li id="item-2">item-2</li>
+            <li id="item-3">item-3</li>
+            <li id="item-4">item-4</li>
+            <li id="item-5">item-5</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById("item-2").addEventListener('click', function (event) {
+            console.log('item-1');
+        })
+        document.getElementById("item-2").addEventListener('click', function (event) {
+            console.log('item-2');
+        })
+        document.getElementById("item-2").addEventListener('click', function (event) {
+            console.log('item-3');
+            event.stopImmediatePropagation()
+        })
+        document.getElementById("item-2").addEventListener('click', function (event) {
+            console.log('item-4');
+        })
+
+        document.getElementById("list-container").addEventListener('click', function () {
+            console.log("list-container")
+        })
+    </script>
+</body>
+
+</html>
