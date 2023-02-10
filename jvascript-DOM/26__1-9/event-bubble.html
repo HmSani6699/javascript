@@ -37,8 +37,8 @@
             console.log('item-4');
         })
 
-        document.getElementById("list-container").addEventListener('click', function () {
-            console.log("list-container")
+        document.getElementById("list-container").addEventListener('click', function (event) {
+            console.log(event.target)
         })
     </script>
 </body>

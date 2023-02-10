@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Summery</title>
+</head>
+
+<body>
+    <!-- add event handler to 7 item  -->
+    <section>
+        <h2>First Section</h2>
+        <!-- item 1 -->
+        <button
+            onclick="console.log('Amar vallo lagse na')">Button</button>
+        <!-- item 2 -->
+        <button onclick="redFun()">Red</button>
+
+        <!-- item 3-->
+        <button id="green-btn">Green</button>
+        <!-- author item 3-->
+        <button id="yellow-btn">Yellow</button>
+
+        <!-- item 4-->
+        <button id="orange-btn">Orange</button>
+        <!--author item 4-->
+        <button id="black-btn">Black</button>
+
+        <!-- item 5 -->
+        <button id="blue-btn">Blue</button>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <!-- seconde section -->
+    <section>
+        <h2 id="element">Please change your text
+        </h2>
+        <input type="text" id="input-text">
+        <button id="change-btn">Change</button>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <!-- third section -->
+    <section>
+        <h1>Add to new comment</h1>
+        <div id="container">
+            <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Velit, quia. Obcaecati hic
+                quibusdam veritatis quaerat
+                impedit, minus eius soluta ipsam
+                suscipit debitis in qui totam enim
+                consectetur, unde possimus
+                consequuntur facere provident.
+                Ducimus commodi quo doloremque
+                debitis accusantium error sunt
+                obcaecati unde, ex aut rerum
+                dolore amet harum numquam quos!
+            </p>
+            <p>Tempore praesentium maiores sequi
+                laboriosam dolor temporibus eum,
+                commodi voluptate sunt aliquam
+                explicabo rem quos enim suscipit
+                laudantium natus eaque! Cupiditate
+                vitae omnis et, deserunt fuga
+                earum laudantium error? Est, ipsa
+                dignissimos. Quas, quidem ullam
+                modi, mollitia exercitationem
+                eaque magnam recusandae a,
+                consectetur reprehenderit maiores.
+                Sunt quidem a corrupti optio.</p>
+            <p>Deserunt eligendi doloremque ut
+                fugit tempore voluptas nemo culpa
+                nulla unde repellat sunt fuga
+                rerum iure laborum excepturi hic
+                fugiat, quisquam id, molestias,
+                totam laudantium. Saepe nobis
+                architecto voluptatum rem officiis
+                suscipit, amet, numquam totam aut
+                reiciendis, quisquam
+                exercitationem enim nesciunt
+                consectetur facilis fugit?
+                Perferendis dolore dolores eveniet
+                dolorem. Quo.</p>
+        </div>
+        <div>
+            <textarea name="" id="comment-box"
+                cols="80" rows="5"></textarea>
+            <button id="comment-btn">Add</button>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+
+    <!-- fourth section -->
+    <section>
+        <h1>Event Bubble</h1>
+        <ul id="ul">
+            <li class="item">Lorem, ipsum dolor.
+            </li>
+            <li class="item">Quo, qui porro.</li>
+            <li class="item">Mollitia, alias
+                perferendis?</li>
+            <li class="item">Consequuntur,
+                corporis nisi?</li>
+            <li class="item">Quasi, sint velit?
+            </li>
+        </ul>
+        <button id="new-item-btn">New
+            Item</button>
+    </section>
+
+    <script>
+        // let items = document.getElementsByClassName('item');
+        // for (let item of items) {
+        //     item.addEventListener('click', function (event) {
+        //         console.log(event.target.parentNode.removeChild(event.target))
+        //     })
+        // }
+
+        document.getElementById('ul').addEventListener('click', function (event) {
+            event.target.parentNode.removeChild(event.target)
+        })
+
+        document.getElementById('new-item-btn').addEventListener('click', function () {
+            let li = document.createElement('li');
+            li.innerText = 'new item';
+
+            document.getElementById('ul').appendChild(li)
+        })
+
+    </script>
+
+    <!-- first section js-->
+    <script>
+        //<button onclick="console.log('Amar vallo lagse na')">Button</button>
+
+        // 2.
+        function redFun() {
+            document.body.style.background = 'red'
+        }
+        // 3.
+        let greenBtn = document.getElementById('green-btn');
+        greenBtn.onclick = greenFun;
+        function greenFun() {
+            document.body.style.background = 'green'
+        }
+        //author 3
+        let yellowBtn = document.getElementById('yellow-btn');
+        yellowBtn.onclick = function () {
+            document.body.style.background = 'yellow'
+        }
+
+        // 4.
+        let orangeBtn = document.getElementById('orange-btn');
+        orangeBtn.addEventListener('click', orange)
+
+        function orange() {
+            document.body.style.background = 'orange'
+        }
+        //author 4
+        let blackBtn = document.getElementById('black-btn');
+        blackBtn.addEventListener('click', function () {
+            document.body.style.background = 'black'
+        });
+
+        //5
+        document.getElementById('blue-btn').addEventListener('click', function () {
+            document.body.style.background = 'blue'
+        })
+    </script>
+
+    <!-- section section js-->
+    <script>
+        document.getElementById('change-btn').addEventListener('click', function () {
+            let inputText = document.getElementById('input-text');
+            document.getElementById('element').innerText = inputText.value;
+            inputText.value = ''
+        })
+    </script>
+
+    <!-- third section js-->
+    <script>
+        document.getElementById('comment-btn').addEventListener('click', function () {
+            let commentBox = document.getElementById('comment-box');
+            let newCommnet = commentBox.value;
+
+            let commnetConTainer = document.getElementById('container')
+
+            let p = document.createElement('p');
+            p.innerText = newCommnet;
+
+            commnetConTainer.appendChild(p);
+
+            commentBox.value = ''
+        })
+    </script>
+</body>
+
+</html>
