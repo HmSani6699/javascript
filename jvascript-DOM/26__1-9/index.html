@@ -31,7 +31,16 @@
 
     <!-- number 5 -->
     <button id="black-btn">Black</button>
+
+    <h1 id="update-text">Update Element</h1>
+    <input id="input-text" type="text">
+    <button id="update-btn">Update</button>
     <script>
+        document.getElementById('update-btn').addEventListener('click', function () {
+            let inputText = document.getElementById('input-text');
+            let updateText = document.getElementById('update-text').innerText = inputText.value;
+            inputText.value = ""
+        })
     </script>
     <script src="js/event.js"></script>
 </body>
